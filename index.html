@@ -6,17 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - William Ramsay</title>
     <style type="text/css">
-        *{
-            border:0;
-            margin:0;
+        * {
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .pdf-container {
+            width: 100%;
+            height: 100vh;
+        }
+        iframe {
+            width: 100%;
+            height: calc(100vh - 40px); /* Leave space for fallback text */
+            border: none;
+        }
+        .fallback {
+            padding: 10px;
+            text-align: center;
+            background-color: #f0f0f0;
         }
     </style>
 </head>
 <body>
-    <div style="height: 100vh;">
-        <embed src="https://virulentis.github.io/Public-Resume/William_Ramsay_CV.pdf" type="application/pdf" />
-        <p>If the PDF doesn't display, <a href="https://virulentis.github.io/Public-Resume/William_Ramsay_CV.pdf">download it here</a>.</p>
-
+    <div class="pdf-container">
+        <iframe src="https://virulentis.github.io/Public-Resume/William_Ramsay_CV.pdf" width="100%" height="100%"></iframe>
+    </div>
+    <div class="fallback">
+        <p>If the PDF doesn't display, <a href="https://virulentis.github.io/Public-Resume/William_Ramsay_CV.pdf">click here to view the PDF</a>.</p>
     </div>
 </body>
 </html>
